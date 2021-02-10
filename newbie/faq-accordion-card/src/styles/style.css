@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(#af67e9, #6565e7);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
