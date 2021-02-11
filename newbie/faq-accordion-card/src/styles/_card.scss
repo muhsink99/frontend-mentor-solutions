@@ -1,0 +1,60 @@
+.card { 
+    background-color: $white; 
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    
+    border-radius: 30px;
+    margin-bottom: 10px;
+    position: relative;
+
+    grid-template-columns: repeat(2, 1fr); 
+
+    background: url("../images/illustration-woman-online-mobile.svg") no-repeat 50% -5rem,
+    url("../images/bg-pattern-mobile.svg") no-repeat -55rem -100rem;
+
+    &__hero { 
+        visibility: hidden;
+        grid-column-start: auto;
+    }
+
+    &__faq {
+        grid-column-end: auto;
+    }
+
+    background-color: white;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .card {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 920px;
+        padding: 55px;
+
+        background: url("../images/illustration-woman-online-desktop.svg") no-repeat -15%
+            center,
+        url("../images/bg-pattern-desktop.svg") no-repeat -875% center;
+
+        &__hero { 
+            visibility: visible;
+            display: block;
+            position: absolute;
+            transform: translate(-75%,100%);
+            grid-column: 1;
+        }
+
+        &__faq {
+            display: flex; 
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        background-color: white;
+    }
+}
