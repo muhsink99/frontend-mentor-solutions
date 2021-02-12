@@ -1,47 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-</head>
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
 
-<body>
-  <div class="card">
-    <div class="card__hero">
-      <img src="images/illustration-box-desktop.svg">
+  <body>
+      <div class="card">
+        <div class="card__hero">
+          <img src="images/illustration-box-desktop.svg" />
+        </div>
+        <div class="card__faq">
+          <h1>FAQ</h1>
+          <summary class="card__question">
+              <div>
+                <span class="card__question-text">How many team members can I invite?</span> 
+                <img src="./images/icon-arrow-down.svg"> </img>
+              </div>
+              <div class="card__answer">
+                  wqewqeweqasas
+              </div>
+          </summary>
+          <summary class="card__question">
+            <div>
+              <span class="card__question-text">How many team members can I invite?</span> 
+              <img src="./images/icon-arrow-down.svg"> </img>
+            </div>
+            <div class="card__answer">
+              wqewqeweqasas22
+            </div>
+          </summary>
+          <summary class="card__question">
+            <div>
+            <span class="card__question-text">How many team members can I invite?</span> 
+            <img src="./images/icon-arrow-down.svg"> </img>
+            </div>
+            <div class="card__answer">
+              wqewqeweqasas
+            </div>
+          </summary>
+          <summary class="card__question">
+            <div>
+              <span class="card__question-text">How many team members can I invite?</span> 
+              <img src="./images/icon-arrow-down.svg"> </img>
+            </div>
+            <div class="card__answer">
+              wqewqeweqasas
+            </div>
+          </summary>
+          <summary class="card__question">
+            <div>
+              <span class="card__question-text">How many team members can I invite?</span> 
+              <img src="./images/icon-arrow-down.svg"> </img>
+            </div>
+            <div class="card__answer">
+              wqewqeweqasas
+          </div>
+        </div>
+      </summary>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
     </div>
 
-    <div class="card__faq">
-      <h1>FAQ</h1>
-      <p>
-        How many team members can I invite?
-      <p>
-      <p>
-        What is the maximum file upload size?
-      <p>
-      <p>
-        How do I reset my password?
-      <p>
-      <p>
-        Can I cancel my subscription?
-      <p>
-      <p>
-        Do you provide additional support?
-      <p>
 
-    </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 
+  <script> 
+    $('.card__answer').each(function(answerIndex, answer) {
+      $(answer).hide();
+    });
+
+    $('.card__question').each(function(questionIndex, question) { 
+      $('.card__answer').each(function(answerIndex, answer) {
+          if (questionIndex !== answerIndex) return; 
+          $(question).click(function() { 
+            if ($(answer).is(':hidden')) {
+             $(answer).show();
+             $(question).attr("active", "true"); 
+            } else  {
+              $(answer).hide(); 
+             $(question).removeAttr("active"); 
+            }
+          });
+      })
+    })
+  </script> 
 </html>

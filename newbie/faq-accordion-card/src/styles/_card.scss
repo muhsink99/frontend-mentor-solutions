@@ -1,60 +1,95 @@
-.card { 
-    background-color: $white; 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 30px;
+  padding: 55px;
+  width: 90%;
+  margin: 100px 10px 10px 10px;
+
+  &__hero {
+    display: none;
+    max-height: 100px;
+  }
+
+  &__faq {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 90%;
-    padding: 10px;
-    
-    border-radius: 30px;
-    margin-bottom: 10px;
-    position: relative;
+    text-align: left;
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
 
-    grid-template-columns: repeat(2, 1fr); 
+  &__question {
+    display: flex;
+    flex-direction: column;
 
-    background: url("../images/illustration-woman-online-mobile.svg") no-repeat 50% -5rem,
-    url("../images/bg-pattern-mobile.svg") no-repeat -55rem -100rem;
+    div {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    img {
+      margin-left: auto;
+      margin-top: 4px;
+      width: 10px;
+      height: 7px;
+    }
+    margin-bottom: 30px;
 
-    &__hero { 
-        visibility: hidden;
-        grid-column-start: auto;
+    border-bottom: 0.5px solid $light-grayish-blue;
+  }
+
+  &__question[active] {
+    span {
+      font-weight: $font-weight-bold;
     }
 
-    &__faq {
-        grid-column-end: auto;
+    img {
+      transform: rotate(180deg);
     }
+  }
 
-    background-color: white;
+  &__question:hover &__question-text {
+    cursor: pointer;
+    color: $soft-red;
+  }
+
+  &__question:hover {
+    cursor: pointer;
+  }
+
+  &__answer {
+    display: none;
+    cursor: default;
+    color: $dark-grayish-blue;
+  }
+
+  background-color: $white;
 }
 
 @media (min-width: $desktop-breakpoint) {
-    .card {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
+  .card {
+    max-width: 920px;
 
-        max-width: 920px;
-        padding: 55px;
-
-        background: url("../images/illustration-woman-online-desktop.svg") no-repeat -15%
-            center,
-        url("../images/bg-pattern-desktop.svg") no-repeat -875% center;
-
-        &__hero { 
-            visibility: visible;
-            display: block;
-            position: absolute;
-            transform: translate(-75%,100%);
-            grid-column: 1;
-        }
-
-        &__faq {
-            display: flex; 
-            flex-direction: column;
-            justify-content: flex-start;
-            text-align: left;
-        }
-
-        background-color: white;
+    background: url("../images/illustration-woman-online-desktop.svg") no-repeat -15%
+        center,
+      url("../images/bg-pattern-desktop.svg") no-repeat -875% center;
+    &__hero {
+      display: block;
+      position: absolute;
+      transform: translate(-75%, 160%);
     }
+
+    &__faq {
+      margin-left: 400px;
+      padding-right: 100px;
+      h1 {
+        text-align: left;
+      }
+    }
+    background-color: $white;
+  }
 }
