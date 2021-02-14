@@ -1,0 +1,11 @@
+// Mobile
+.hero {
+	text-align: center;
+}
+
+// Desktop
+@media (min-width: $desktop-breakpoint) {
+	.hero {
+		text-align: left;
+	}
+}
