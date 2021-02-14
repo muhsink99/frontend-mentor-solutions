@@ -24,7 +24,7 @@ body p {
 
 .container {
   display: grid;
-  width: 80%;
+  width: 70%;
   padding: 5rem 0rem 5rem 0rem;
   margin: 0 auto;
 }
@@ -61,30 +61,36 @@ body p {
   display: inline-flex;
   flex-direction: column;
   text-align: center;
-  width: 80%;
-  margin: auto;
+  margin-top: 30px;
 }
 .reviews .review {
   display: inline-flex;
   flex-direction: column;
   background-color: #f7f2f7;
   min-width: 200px;
+  margin-bottom: 20px;
   padding: 1rem 2rem 1rem 2rem;
-  margin: 15px;
   border-radius: 10px;
   text-align: center;
 }
 .reviews .review h4 {
-  margin-left: 20px;
+  text-align: middle;
   margin-top: 10px;
   font-size: 15px;
   line-height: 1rem;
+  padding: 0;
 }
 .reviews .review div {
   margin-top: auto;
   margin-bottom: auto;
 }
 @media (min-width: 1440px) {
+  .reviews .reviews {
+    width: 80%;
+  }
+  .reviews h4 {
+    margin-left: 1rem;
+  }
   .reviews .review {
     flex-direction: row;
     min-width: 400px;
@@ -94,6 +100,7 @@ body p {
   }
   .reviews .review:nth-child(2) {
     margin: 0 auto;
+    margin-bottom: 20px;
   }
   .reviews .review:last-child {
     margin-left: auto;

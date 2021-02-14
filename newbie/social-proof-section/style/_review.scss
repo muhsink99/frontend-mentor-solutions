@@ -3,28 +3,27 @@
 	flex-direction: column;
 
 	text-align: center;
+	margin-top: 30px;
 
-	width: 80%;
-	margin: auto;
 	.review {
 		display: inline-flex;
 		flex-direction: column;
 		background-color: $light-grayish-magenta;
 
 		min-width: 200px;
+		margin-bottom: 20px;
 
 		padding: 1rem 2rem 1rem 2rem;
-		margin: 15px;
-
 		border-radius: 10px;
 
 		text-align: center;
 
 		h4 {
-			margin-left: 20px;
+			text-align: middle;
 			margin-top: 10px;
 			font-size: $body-font-size;
 			line-height: 1rem;
+			padding: 0;
 		}
 
 		div {
@@ -35,6 +34,12 @@
 
 	// Desktop
 	@media (min-width: $desktop-breakpoint) {
+		.reviews {
+			width: 80%;
+		}
+		h4 {
+			margin-left: 1rem;
+		}
 		.review {
 			flex-direction: row;
 			min-width: 400px;
@@ -44,6 +49,7 @@
 		}
 		.review:nth-child(2) {
 			margin: 0 auto;
+			margin-bottom: 20px;
 		}
 		.review:last-child {
 			margin-left: auto;
