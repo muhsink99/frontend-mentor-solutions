@@ -1,7 +1,7 @@
 .testimonials {
 	display: inline-flex;
 	flex-direction: column;
-	height: 100%;
+	margin: 0 auto;
 
 	.testimonial {
 		background-color: $very-dark-magenta;
@@ -39,6 +39,7 @@
 			color: $white;
 			margin-top: 30px;
 			font-size: 0.8rem;
+			line-height: 1.5rem;
 		}
 	}
 }
@@ -46,7 +47,6 @@
 @media (min-width: $desktop-breakpoint) {
 	.testimonials {
 		flex-direction: row;
-		margin-top: 150px;
 	}
 	.testimonial {
 		height: 200px;

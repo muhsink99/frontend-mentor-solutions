@@ -22,8 +22,12 @@ body {
 	}
 
 	// Spacing:
-	margin: 0;
+	justify-content: center;
+	vertical-align: middle;
+	align-items: center;
 	padding: 0;
+
+	height: 100vh;
 
 	// Background:
 	background: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
@@ -38,6 +42,8 @@ body {
 
 	// sizing
 	width: 70%;
+	height: 100vh;
+
 	padding: 5rem 0rem 5rem 0rem;
 
 	// alignment
