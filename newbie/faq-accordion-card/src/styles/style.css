@@ -2,13 +2,24 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
-  box-sizing: border-box;
-  align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
   padding: 2rem 3rem;
 }
@@ -17,14 +28,22 @@ body {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: #3e52a3;
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1rem;
   border-radius: 30px;
   padding: 55px;
@@ -34,9 +53,11 @@ body {
   background: url("../images/bg-pattern-mobile.svg") no-repeat 51% -5%;
   background-color: #ffffff;
 }
+
 .card__hero img:first-child {
   display: none;
 }
+
 .card__hero img:last-child {
   display: block;
   position: absolute;
@@ -47,53 +68,80 @@ body {
   margin: 0 auto;
   max-width: 265px;
 }
+
 .card__faq {
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: left;
 }
+
 .card__faq h1 {
   text-align: center;
   margin-bottom: 40px;
 }
+
 .card__question {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
   border-bottom: 0.5px solid #e7e7e9;
 }
+
 .card__question div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
+
 .card__question img {
   margin-left: auto;
   margin-top: 4px;
   width: 10px;
   height: 7px;
 }
+
 .card__question[active] span {
   font-weight: 700;
 }
+
 .card__question[active] img {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
+
 .card__question:hover .card__question-text {
+  -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   cursor: pointer;
   color: #f47c57;
 }
+
 .card__question:hover {
   cursor: pointer;
 }
+
 .card__answer {
   display: none;
   cursor: default;
   color: #787887;
+  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+
 .card__question[active] .card__answer:after {
+  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
@@ -123,5 +171,4 @@ body {
     text-align: left;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

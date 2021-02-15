@@ -7,16 +7,19 @@ html body {
   font-size: 18px;
   font-weight: 400;
 }
+
 @media all and (min-width: 1440px) {
   html body {
     background-position: -20% 60%, 120% -60%;
   }
 }
+
 @media all and (max-width: 500px) and (min-height: 300px) {
   html body {
     background-position: 160% 60%, -40% -20%;
   }
 }
+
 html body h1,
 html body h2,
 html body h3,
@@ -24,10 +27,15 @@ html body h4,
 html body h5 {
   font-weight: 700;
 }
+
 html .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .profile-card {
@@ -43,15 +51,24 @@ html .container {
   background-repeat: no-repeat, no-repeat;
   background-size: 450px 35%;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
+
 .profile-card span {
   color: #969696;
   font-weight: 400;
 }
+
 .profile-card img {
   position: absolute;
   top: 25%;
@@ -60,36 +77,50 @@ html .container {
   padding: 5px;
   background-color: white;
 }
+
 .profile-card .profile-intro {
   margin-top: 250px;
 }
+
 .profile-card .profile-intro h3 {
   margin-bottom: 10px;
 }
+
 .profile-card .profile-intro h3 span {
   margin-left: 10px;
 }
+
 .profile-card .profile-footer {
   width: 100%;
   margin-top: 50px;
   border-top: 1px solid #e3e3e3;
   margin-bottom: 50px;
 }
+
 .profile-card .profile-footer .profile-stats {
   padding-left: 20px;
   padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
+
 .profile-card .profile-footer .profile-stats span {
   font-size: 10px;
   letter-spacing: 2px;
 }
+
 .profile-card .profile-footer .profile-stats h4 {
   margin-bottom: 0px;
 }
-
 /*# sourceMappingURL=style.css.map */
